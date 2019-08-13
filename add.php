@@ -35,6 +35,13 @@
 				$errors['details'] = 'Must be comma-separated words! ';
 			}
 		}
+
+		if(array_filter($errors)){
+			echo 'errors in form';
+		} else {
+			header('Location: index.php');
+		}
+
 	} // the end of POST check
  ?>
 
