@@ -37,15 +37,15 @@
 	<h4 class="center grey-text"> Lessons: </h4>
 	<div class="container">
 		<div class="row">
-			<?php foreach ($lessons as $lesson) { ?>
+			<?php foreach ($lessons as $lesson): ?>
 				<div class="col s6 md3"> 
 					<div class="card z-depth-0"> 
 						<div class="card-content center">
 							<h5><?php echo htmlspecialchars($lesson['title']); ?></h5>
 							<ul>
-								<?php  foreach(explode(',',$lesson['details']) as $detail)  { ?>
+								<?php  foreach(explode(',',$lesson['details']) as $detail): ?>
 									<li><?php echo htmlspecialchars($detail)  ?></li>
-							<?php } ?>
+							<?php endforeach; ?>
 							</ul>
 						</div>
 						<div class="card-action center-align">
@@ -54,7 +54,7 @@
 					</div>
 				</div> 
 
-			<?php } ?>
+			<?php endforeach; ?>
 		</div>
 	</div>
 
