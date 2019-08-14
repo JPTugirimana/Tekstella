@@ -34,7 +34,8 @@
 		<div class="row">
 			<?php foreach ($lessons as $lesson): ?>
 				<div class="col s6 md3"> 
-					<div class="card z-depth-0"> 
+					<div class="card z-depth-0">
+					<img src="img/kidsPyhon.jpg" class="lessonImage"> 
 						<div class="card-content center">
 							<h5><?php echo htmlspecialchars($lesson['title']); ?></h5>
 							<ul>
