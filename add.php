@@ -1,5 +1,8 @@
 <?php 
 	
+	// Connect to the database
+	include('config/db_connect.php'); 
+
 	$email = $title = $details = '';
 	$errors = array('email'=>'','title'=>'','details'=>'');
 
@@ -37,9 +40,31 @@
 		}
 
 		if(array_filter($errors)){
-			echo 'errors in form';
+			//echo 'errors in form';
+			// errors get displayed in html codes
 		} else {
-			header('Location: index.php');
+			// Save to database
+			//==================
+
+			// First, proect data going in the database
+			$email = mysqli_real_escape_string($conn, $_POST['email']);
+			$title = mysqli_real_escape_string($conn, $_POST['title']);
+			$details = mysqli_real_escape_string($conn, $_POST['details']);
+
+			// Create sql query
+			$sql = "INSERT INTO lessons(title,email,details) VALUES ('$title','$email','$details')";
+
+			// Save to db and check
+			if(mysqli_query($conn, $sql)){
+				//success
+				// Redirect to homepage
+				//=======================
+				header('Location: index.php');
+			} else {
+				// error
+				echo 'query error: ' . mysqli_error($conn);
+			}
+
 		}
 
 	} // the end of POST check
