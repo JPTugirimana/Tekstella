@@ -44,7 +44,7 @@
 							</ul>
 						</div>
 						<div class="card-action center-align">
-						<a class="brand-text" href="#">more info</a>	
+						<a class="brand-text" href="details.php?id=<?php echo $lesson['id']?> ">more info</a>	
 						</div>
 					</div>
 				</div> 
