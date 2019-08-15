@@ -2,28 +2,9 @@
 	<title> Tekstella: Kids Coding and STEM Curriculum </title>
 	<!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <style type="text/css">
-    	.brand{
-    		background: #e64a19 !important;
-    	}
-    	.brand-text {
-    		color:#e64a19 !important;
-    	}
-    	form{
-    		max-width: 460px;
-    		margin: 20px auto;
-    		padding: 20px;
-
-    	}
-
-        .lessonImage{
-            width: 100px;
-            margin:40px auto -30px;
-            display: block;
-            position: relative;
-            top: -30px;
-        }
-    </style>
+    <!-- my own css -->
+    <link rel="stylesheet" type="text/css" href="/tekstella_app/css/style.css" >
+    
 </head>
 <body class="red lighten-5">
 	<nav class="red lighten-5 z-depth-0">
